@@ -7,7 +7,8 @@ state("flashplayer14")
 
 startup
 {
-	settings.Add("isIL", false, "Individual level mode)");
+	settings.Add("isIL", false, "Individual level mode");
+	settings.Add("pauseEnabled", false, "Enable autopausing during loads and menu");
 }
 
 init
@@ -45,5 +46,5 @@ update
 
 isLoading
 {
-    return current.active == 0;
+    if (settings["pauseEnabled"]) return current.active == 0;
 }
