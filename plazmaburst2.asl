@@ -1,8 +1,15 @@
-state("flashplayer14")
+ state("flashplayer14")
 {
 	int active	: "flashplayer14.exe", 0x00AC8398, 0x4, 0x328, 0x44, 0x4, 0xFC, 0x334;
 	int level	: "flashplayer14.exe", 0x00AC7FD4, 0x408, 0xFC, 0x1F0;
 	int frame	: "flashplayer14.exe", 0x00AC7DB8, 0x10C, 0x4C;
+}
+
+ state("flashplayer_30_r0_sa")
+{
+	int active	: "flashplayer_30_r0_sa.exe", 0x0100B038, 0x310, 0x1F8, 0x384;
+	int level	: "flashplayer_30_r0_sa.exe", 0x0100B038, 0x310, 0x1F8, 0x240;
+	int frame	: "flashplayer_30_r0_sa.exe", 0x0100B038, 0x380, 0xB0;
 }
 
 startup
